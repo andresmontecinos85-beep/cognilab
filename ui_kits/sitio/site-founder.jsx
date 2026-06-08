@@ -12,7 +12,7 @@ function Catalina() {
       <div className="wrap">
         <div className="founder">
           <div className="founder__photo reveal">
-            <img src="../../assets/photo-catalina.png" alt="Catalina Bobadilla Arias, fonoaudióloga y fundadora de CogniLab" />
+            <img src="/cognilab/assets/photo-catalina.png" alt="Catalina Bobadilla Arias, fonoaudióloga y fundadora de CogniLab" />
           </div>
           <div className="reveal">
             <span className="cl-eyebrow">Sobre Catalina · Fundadora</span>
