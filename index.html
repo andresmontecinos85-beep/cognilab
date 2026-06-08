@@ -107,10 +107,15 @@ html.js .rev:not(.in){opacity:0;transform:translateY(20px)}.rev.in{opacity:1;tra
 .ftr ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--sp3);font:var(--body-sm)}
 .ftr-bot{display:flex;justify-content:space-between;align-items:center;gap:var(--sp4);padding-top:var(--sp5);font:var(--body-sm);color:var(--teal-200);flex-wrap:wrap}
 .ftr-bot .socials .social{background:color-mix(in srgb,#fff 10%,transparent);border-color:color-mix(in srgb,#fff 18%,transparent);color:#fff}.ftr-bot .socials .social:hover{background:#fff;color:var(--teal-900)}
-@media(max-width:1040px){.nav{display:none}.hdr-cta .btn:not(.wa-btn){display:none}.burger{display:block}}
+@media(max-width:1040px){.nav{display:none}.hdr-cta .btn{display:none}.burger{display:none}}
 /* Offset for sticky header + mobile nav strip */
 section[id]{scroll-margin-top:80px}
-@media(max-width:1040px){section[id]{scroll-margin-top:130px}}
+@media(max-width:1040px){section[id]{scroll-margin-top:145px}}
+/* Floating WhatsApp button */
+.wa-float{position:fixed;bottom:24px;right:20px;z-index:100;display:none;align-items:center;gap:10px;background:#25D366;color:#0a3d23;font:var(--fw-semibold) var(--text-sm) var(--font-body);padding:14px 20px;border-radius:var(--r-pill);box-shadow:0 8px 28px rgba(37,211,102,.45);text-decoration:none;transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(37,211,102,.5);color:#0a3d23}
+.wa-float svg{width:22px;height:22px;flex-shrink:0}
+@media(max-width:1040px){.wa-float{display:flex}}
 .mobile-nav{display:none;overflow-x:auto;background:var(--paper);border-bottom:1px solid var(--border-soft);padding:0 var(--gutter);gap:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .mobile-nav::-webkit-scrollbar{display:none}
 .mobile-nav a{font:var(--fw-medium) var(--text-sm) var(--font-body);color:var(--ink-700);white-space:nowrap;padding:12px 14px;display:block;border-bottom:2px solid transparent;flex-shrink:0}
@@ -119,9 +124,9 @@ section[id]{scroll-margin-top:80px}
 @media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-media{order:-1;max-width:440px}.founder{grid-template-columns:1fr}.founder-photo{max-width:380px}.contact{grid-template-columns:1fr}.g3,.modals{grid-template-columns:1fr 1fr}.ftr-top{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.g3,.g2,.modals,.frow{grid-template-columns:1fr}.ftr-top{grid-template-columns:1fr}.hero-badge{left:8px}}
 @media(max-width:480px){
-  .brand-logo{height:72px}
-  .hdr-in{height:82px}
-  .mnav{inset:82px 0 auto}
+  .brand-logo{height:90px}
+  .hdr-in{height:100px}
+  .mnav{inset:100px 0 auto}
   .hero{padding-top:var(--sp6);padding-bottom:var(--sp7)}
   .hero-h{font-size:2rem}
   .hero-lead{font-size:var(--text-base);margin-top:var(--sp4)}
@@ -352,7 +357,9 @@ function App() {
     document.querySelectorAll('.rev').forEach(el=>io.observe(el));
     return()=>io.disconnect();
   },[]);
-  return <><Header/><main><Hero/><Modalidades/><Servicios/><Especialidades/><SobreCogniLab/><Catalina/><Faq/><Contacto/></main><Footer/></>;
+  return <><Header/><main><Hero/><Modalidades/><Servicios/><Especialidades/><SobreCogniLab/><Catalina/><Faq/><Contacto/></main><Footer/>
+    <a className="wa-float" href={WA} target="_blank" rel="noopener"><WAIcon size={22}/> Agenda por WhatsApp</a>
+  </>;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
