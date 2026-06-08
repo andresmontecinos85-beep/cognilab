@@ -108,6 +108,9 @@ html.js .rev:not(.in){opacity:0;transform:translateY(20px)}.rev.in{opacity:1;tra
 .ftr-bot{display:flex;justify-content:space-between;align-items:center;gap:var(--sp4);padding-top:var(--sp5);font:var(--body-sm);color:var(--teal-200);flex-wrap:wrap}
 .ftr-bot .socials .social{background:color-mix(in srgb,#fff 10%,transparent);border-color:color-mix(in srgb,#fff 18%,transparent);color:#fff}.ftr-bot .socials .social:hover{background:#fff;color:var(--teal-900)}
 @media(max-width:1040px){.nav{display:none}.hdr-cta .btn:not(.wa-btn){display:none}.burger{display:block}}
+/* Offset for sticky header + mobile nav strip */
+section[id]{scroll-margin-top:80px}
+@media(max-width:1040px){section[id]{scroll-margin-top:130px}}
 .mobile-nav{display:none;overflow-x:auto;background:var(--paper);border-bottom:1px solid var(--border-soft);padding:0 var(--gutter);gap:0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .mobile-nav::-webkit-scrollbar{display:none}
 .mobile-nav a{font:var(--fw-medium) var(--text-sm) var(--font-body);color:var(--ink-700);white-space:nowrap;padding:12px 14px;display:block;border-bottom:2px solid transparent;flex-shrink:0}
