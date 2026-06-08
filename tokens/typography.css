@@ -1,0 +1,53 @@
+/* ============================================================
+   CogniLab — Typography tokens
+   Editorial rhythm: soft serif display, humanist sans body.
+   ============================================================ */
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-body:    'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-brand:   'Quicksand', 'Hanken Grotesk', system-ui, sans-serif;
+
+  /* ---- Type scale (fluid-ready rem) ---- */
+  --text-xs:   0.8125rem;  /* 13 — labels, captions */
+  --text-sm:   0.9375rem;  /* 15 — fine print, meta */
+  --text-base: 1.0625rem;  /* 17 — body (warm, readable) */
+  --text-md:   1.1875rem;  /* 19 — lead paragraphs */
+  --text-lg:   1.375rem;   /* 22 */
+  --text-xl:   1.75rem;    /* 28 */
+  --text-2xl:  2.25rem;    /* 36 */
+  --text-3xl:  2.875rem;   /* 46 */
+  --text-4xl:  3.75rem;    /* 60 */
+  --text-5xl:  4.75rem;    /* 76 — hero */
+
+  /* ---- Weights ---- */
+  --fw-regular:  400; /* @kind font */
+  --fw-medium:   500; /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold:     700; /* @kind font */
+  --fw-extra:    800; /* @kind font */
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.08; /* @kind font */
+  --lh-snug:    1.2;  /* @kind font */
+  --lh-normal:  1.45; /* @kind font */
+  --lh-relaxed: 1.65; /* @kind font */
+
+  /* ---- Letter spacing ---- */
+  --ls-tight:  -0.02em; /* @kind font */
+  --ls-snug:   -0.01em; /* @kind font */
+  --ls-normal: 0;       /* @kind font */
+  --ls-wide:   0.04em;  /* @kind font */
+  --ls-eyebrow:0.16em;  /* @kind font */
+
+  /* ---- Semantic text roles ---- */
+  --display:  var(--fw-medium) var(--text-5xl)/var(--lh-tight) var(--font-display);
+  --h1:       var(--fw-medium) var(--text-4xl)/var(--lh-tight) var(--font-display);
+  --h2:       var(--fw-medium) var(--text-3xl)/var(--lh-snug) var(--font-display);
+  --h3:       var(--fw-semibold) var(--text-2xl)/var(--lh-snug) var(--font-display);
+  --h4:       var(--fw-semibold) var(--text-xl)/var(--lh-snug) var(--font-body);
+  --lead:     var(--fw-regular) var(--text-md)/var(--lh-relaxed) var(--font-body);
+  --body:     var(--fw-regular) var(--text-base)/var(--lh-relaxed) var(--font-body);
+  --body-sm:  var(--fw-regular) var(--text-sm)/var(--lh-normal) var(--font-body);
+  --eyebrow:  var(--fw-bold) var(--text-xs)/1 var(--font-brand);
+}
