@@ -1,0 +1,64 @@
+<!-- @dsCard group="Components" viewport="700x660" name="Content · Services · Stats · FAQ" subtitle="Section headings, service cards, stats, accordion, avatar" -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { padding: 32px 34px; background: var(--cream); }
+  .stack { display:flex; flex-direction:column; gap: 30px; }
+  .services { display:grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+  .stats { display:flex; gap: 44px; flex-wrap:wrap; padding: 22px 26px; background: var(--surface-tint); border-radius: var(--radius-lg); }
+  .meet { display:flex; align-items:center; gap:16px; }
+  .lucide { width: 28px; height: 28px; }
+</style></head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { SectionHeading, ServiceCard, Stat, Accordion, Avatar } = window.CogniLabDesignSystem_b6f223;
+    const Ico = ({n}) => <i data-lucide={n} className="lucide"></i>;
+    function Demo(){
+      return (
+        <div className="stack">
+          <SectionHeading eyebrow="Nuestros servicios" title="Tres especialidades, un mismo equipo"
+            lead="Acompañamiento integral basado en evidencia, cálido y centrado en cada familia." />
+          <div className="services">
+            <ServiceCard tone="primary" icon={<Ico n="speech"/>} title="Fonoaudiología">
+              Habla, lenguaje, comunicación y motricidad orofacial.
+            </ServiceCard>
+            <ServiceCard tone="accent" icon={<Ico n="puzzle"/>} title="Terapia Ocupacional">
+              Autonomía, juego, integración sensorial y vida diaria.
+            </ServiceCard>
+            <ServiceCard tone="amber" icon={<Ico n="heart-handshake"/>} title="Psicología">
+              Bienestar emocional para niños, jóvenes y sus familias.
+            </ServiceCard>
+          </div>
+          <div className="stats">
+            <Stat value={<>14<em>+</em></>} label="Años de experiencia clínica" />
+            <Stat value="3" label="Disciplinas integradas" />
+            <Stat value="3" label="Modalidades de atención" />
+          </div>
+          <Accordion defaultOpen={[0]} items={[
+            { q: '¿Atienden a domicilio?', a: 'Sí, llegamos a la comodidad de tu hogar para que la terapia ocurra en un entorno seguro y conocido.' },
+            { q: '¿Desde qué edad evalúan?', a: 'Realizamos estimulación temprana desde los primeros meses de vida del niño.' },
+            { q: '¿Trabajan con jardines y colegios?', a: 'Contamos con programas de detección preventiva in situ en jardines y colegios.' },
+          ]} />
+          <div className="meet">
+            <Avatar src="../../assets/photo-catalina.png" alt="Catalina Bobadilla" size="lg" />
+            <div>
+              <div style={{font:'var(--h4)',fontFamily:'var(--font-display)',fontWeight:600,color:'var(--ink-900)'}}>Catalina Bobadilla Arias</div>
+              <div style={{font:'var(--body-sm)',color:'var(--text-muted)'}}>Fonoaudióloga · Fundadora</div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+    requestAnimationFrame(()=> window.lucide && window.lucide.createIcons());
+    setTimeout(()=> window.lucide && window.lucide.createIcons(), 300);
+  </script>
+</body></html>

@@ -1,0 +1,20 @@
+<!-- @dsCard group="Spacing" viewport="700x210" name="Elevation · warm shadows" subtitle="Low-contrast, teal-tinted depth" -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 32px 30px; background: var(--cream); }
+  .grid { display:flex; gap:26px; }
+  .item { text-align:center; flex:1; }
+  .box { height: 84px; background: var(--paper); border-radius: var(--radius-lg); }
+  .cap { margin-top:14px; font: var(--body-sm); color:var(--text-muted); }
+  .cap b { display:block; color: var(--ink-900); font-weight:600; }
+</style></head>
+<body>
+  <div class="grid">
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-sm)"></div><div class="cap"><b>sm</b>chips, inputs</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-card)"></div><div class="cap"><b>card</b>resting cards</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-lg)"></div><div class="cap"><b>lg</b>hover lift</div></div>
+    <div class="item"><div class="box" style="box-shadow:var(--shadow-float)"></div><div class="cap"><b>float</b>dialogs, popovers</div></div>
+  </div>
+</body></html>

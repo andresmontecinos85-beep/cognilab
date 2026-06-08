@@ -1,0 +1,37 @@
+<!-- @dsCard group="Brand" viewport="700x300" name="Logo lockups" subtitle="Mark + wordmark on light and color" -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 0; background: var(--paper); display:grid; grid-template-columns: 1fr 1fr; }
+  .panel { padding: 34px; display:flex; flex-direction:column; gap:22px; align-items:flex-start; justify-content:center; }
+  .panel.dark { background: var(--teal-700); }
+  .lockup { display:flex; align-items:center; gap:14px; }
+  .lockup img { width: 58px; height: 58px; }
+  .wm { font-family: var(--font-brand); font-weight:700; font-size: 42px; letter-spacing:-0.01em; line-height:1; }
+  .stack { display:flex; flex-direction:column; gap:4px; align-items:flex-start; }
+  .tagline { font: 600 11px var(--font-brand); letter-spacing:.16em; text-transform:uppercase; }
+</style></head>
+<body>
+  <div class="panel">
+    <div class="lockup">
+      <img src="../assets/cognilab-mark.png" alt="CogniLab">
+      <div class="stack">
+        <span class="wm" style="color:var(--ink-900)">cogni<span style="color:var(--coral-500)">lab</span></span>
+        <span class="tagline" style="color:var(--teal-700)">Espacio Terapéutico</span>
+      </div>
+    </div>
+    <div class="wm" style="font-size:30px;color:var(--ink-900)">cogni<span style="color:var(--coral-500)">lab</span></div>
+  </div>
+  <div class="panel dark">
+    <div class="lockup">
+      <img src="../assets/cognilab-mark.png" alt="CogniLab">
+      <div class="stack">
+        <span class="wm" style="color:#fff">cogni<span style="color:var(--amber-400)">lab</span></span>
+        <span class="tagline" style="color:var(--teal-200)">Espacio Terapéutico</span>
+      </div>
+    </div>
+    <img src="../assets/cognilab-mark.png" alt="mark" style="width:64px;height:64px">
+  </div>
+</body></html>

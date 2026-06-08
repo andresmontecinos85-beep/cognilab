@@ -1,0 +1,22 @@
+<!-- @dsCard group="Colors" viewport="700x210" name="Warm neutrals & surfaces" subtitle="Ivory paper and soft ink" -->
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 26px 30px; background: var(--paper); }
+  .grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 14px; }
+  .chip { border-radius: var(--radius-md); overflow:hidden; box-shadow: var(--shadow-xs); border:1px solid var(--border-soft); }
+  .chip .fill { height: 64px; }
+  .chip .cap { padding: 8px 10px; font: var(--body-sm); }
+  .chip .cap b { display:block; color: var(--ink-900); font-weight:600; font-size: 13px; }
+  .chip .cap span { color: var(--text-subtle); font-size: 11px; }
+</style></head>
+<body>
+  <div class="grid">
+    <div class="chip"><div class="fill" style="background:var(--cream)"></div><div class="cap"><b>Cream</b><span>page bg</span></div></div>
+    <div class="chip"><div class="fill" style="background:var(--cream-deep)"></div><div class="cap"><b>Cream deep</b><span>alt section</span></div></div>
+    <div class="chip"><div class="fill" style="background:var(--paper);border-bottom:1px solid var(--border-soft)"></div><div class="cap"><b>Paper</b><span>surface</span></div></div>
+    <div class="chip"><div class="fill" style="background:var(--ink-500)"></div><div class="cap"><b>Ink 500</b><span>body muted</span></div></div>
+    <div class="chip"><div class="fill" style="background:var(--ink-900)"></div><div class="cap"><b>Ink 900</b><span>headings</span></div></div>
+  </div>
+</body></html>
