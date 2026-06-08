@@ -25,7 +25,7 @@ const NAV = [
 function Brand({ onClick }) {
   return (
     <a className="brand" href="#inicio" onClick={onClick}>
-      <img src="/cognilab/assets/cognilab-mark.png" alt="CogniLab" />
+      <img src="../../assets/cognilab-mark.png" alt="CogniLab" />
       <span className="brand__wm">cogni<b>lab</b></span>
     </a>
   );
