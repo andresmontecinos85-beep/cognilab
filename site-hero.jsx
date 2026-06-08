@@ -28,11 +28,11 @@ function Hero() {
         <div className="hero__media reveal is-in">
           <div className="hero__blob"></div>
           <div className="hero__photo">
-            <img src="../../assets/photo-consulta.png" alt="Espacio de terapia de CogniLab" />
+            <img src="./assets/photo-consulta.png" alt="Espacio de terapia de CogniLab" />
           </div>
-          <img className="hero__mark" src="../../assets/cognilab-mark.png" alt="" aria-hidden="true" />
+          <img className="hero__mark" src="./assets/cognilab-mark.png" alt="" aria-hidden="true" />
           <div className="hero__badge">
-            <img className="mk" src="../../assets/cognilab-mark.png" alt="" aria-hidden="true" />
+            <img className="mk" src="./assets/cognilab-mark.png" alt="" aria-hidden="true" />
             <div>
               <div style={{ font: 'var(--fw-semibold) var(--text-sm) var(--font-body)', color: 'var(--ink-900)' }}>Atención cercana</div>
               <div style={{ font: 'var(--body-sm)', color: 'var(--text-muted)' }}>En consulta · a domicilio</div>
