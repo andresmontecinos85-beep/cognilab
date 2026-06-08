@@ -157,7 +157,7 @@ function Header() {
 }
 
 function Mark({ size=56 }) {
-  return <div style={{width:size,height:size,borderRadius:'50%',overflow:'hidden',flexShrink:0}}><img src={window.LOGO} alt="" aria-hidden="true" style={{width:'100%',objectFit:'cover',objectPosition:'center top'}}/></div>;
+  return <img src={window.LOGO} alt="" aria-hidden="true" style={{width:size,height:size,objectFit:'contain',flexShrink:0}} />;
 }
 
 function Hero() {
@@ -181,9 +181,9 @@ function Hero() {
         <div className="hero-media rev in">
           <div className="hero-blob"/>
           <div className="hero-photo"><img src={window.CONSULTA} alt="Sala de terapia CogniLab"/></div>
-          <div className="hero-deco"><img src={window.LOGO} alt="" aria-hidden="true" style={{width:80,height:80,objectFit:'contain'}}/></div>
+          <div className="hero-deco"><img src={window.LOGO} alt="" aria-hidden="true" style={{width:110,height:110,objectFit:'contain'}}/></div>
           <div className="hero-badge">
-            <Mark size={44}/>
+            <Mark size={64}/>
             <div><div style={{font:'var(--fw-semibold) var(--text-sm) var(--font-body)',color:'var(--ink-900)'}}>Atención cercana</div><div style={{font:'var(--body-sm)',color:'var(--text-muted)'}}>En consulta · a domicilio</div></div>
           </div>
         </div>
